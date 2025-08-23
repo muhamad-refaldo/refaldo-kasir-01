@@ -4,7 +4,15 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 const app = express();
-app.use(cors());
+
+// --- PERBAIKAN CORS ADA DI SINI ---
+const corsOptions = {
+  origin: 'https://refaldo-kasir-01.vercel.app', // Izinkan hanya domain Vercel Anda
+  optionsSuccessStatus: 200 
+};
+app.use(cors(corsOptions));
+// ------------------------------------
+
 app.use(express.json());
 
 mongoose.connect(process.env.MONGO_URI)
@@ -19,7 +27,7 @@ app.use('/api/transactions', require('./routes/transactions'));
 app.use('/api/reports', require('./routes/reports'));
 app.use('/api/admin', require('./routes/admin'));
 app.use('/api/dashboard', require('./routes/dashboard'));
-app.use('/api/history', require('./routes/history')); // <-- PASTIKAN BARIS INI ADA
+app.use('/api/history', require('./routes/history'));
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server berlari kencang di port ${PORT}`));
