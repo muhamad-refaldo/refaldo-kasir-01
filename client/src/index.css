@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px); /* Sesuaikan jika perlu */
+    padding: 2rem;
+    overflow: hidden;
+}
+
+.profile-card {
+    background-color: rgba(26, 32, 44, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 255, 255, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem;
+    text-align: center;
+    max-width: 900px;
+    width: 100%;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+@media (min-width: 1024px) {
+    .profile-card {
+        flex-direction: row;
+        text-align: left;
+    }
+}
+
+.profile-image-container {
+    position: relative;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    flex-shrink: 0;
+}
+
+@media (min-width: 1024px) {
+    .profile-image-container {
+        margin-right: 2.5rem;
+        margin-bottom: 0;
+    }
+}
+
+.profile-image {
+    display: block;
+    width: 12rem;
+    height: 12rem;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #00FFFF;
+    box-shadow: 0 0 15px #00FFFF, inset 0 0 10px #00FFFF;
+}
+
+.scan-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #00FFFF;
+    box-shadow: 0 0 10px #00FFFF;
+    animation: scan 3s linear infinite;
+    opacity: 0.7;
+}
+
+@keyframes scan {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(12rem); }
+}
+
+.profile-info {
+    color: #E2E8F0;
+    flex-grow: 1;
+}
+
+.name {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #FFFFFF;
+    text-shadow: 0 0 8px #00FFFF;
+}
+
+.role {
+    font-size: 1.25rem;
+    color: #00FFFF;
+    margin-bottom: 1.5rem;
+    font-family: monospace;
+    letter-spacing: 0.1em;
+}
+
+.bio {
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    color: #A0AEC0;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+@media (min-width: 1024px) {
+    .social-links {
+        justify-content: flex-start;
+    }
+}
+
+.social-icon {
+    background: transparent;
+    border: 2px solid rgba(0, 255, 255, 0.5);
+    color: #00FFFF;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.social-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.social-icon:hover {
+    background-color: rgba(0, 255, 255, 0.1);
+    box-shadow: 0 0 15px #00FFFF;
+    color: #FFFFFF;
+}
