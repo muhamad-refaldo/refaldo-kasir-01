@@ -6,10 +6,26 @@ const cors = require('cors');
 const app = express();
 
 // --- PERBAIKAN CORS ADA DI SINI ---
+
+// Daftar URL yang diizinkan untuk mengakses backend ini
+const allowedOrigins = [
+  'https://refaldo-kasir-01.vercel.app', // URL Vercel Anda untuk production
+  'http://localhost:5173'                 // URL development lokal Anda
+];
+
 const corsOptions = {
-  origin: 'https://refaldo-kasir-01.vercel.app', // Izinkan hanya domain Vercel Anda
+  origin: function (origin, callback) {
+    // Izinkan jika origin (sumber permintaan) ada di dalam daftar 'allowedOrigins'
+    // atau jika tidak ada origin (misalnya, saat diakses via Postman atau tes server-ke-server)
+    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error('Akses ditolak oleh kebijakan CORS'));
+    }
+  },
   optionsSuccessStatus: 200 
 };
+
 app.use(cors(corsOptions));
 // ------------------------------------
 

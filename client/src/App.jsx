@@ -17,6 +17,7 @@ import History from './pages/History';
 import About from './pages/About';
 import MonthlyReport from './pages/MonthlyReport'; // <-- Import baru
 import UserManagement from './pages/admin/UserManagement';
+// import TambahProduk from './pages/TambahProduk'; // <-- Impor komponen baru
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         
         {/* Rute Aplikasi yang Dilindungi */}
         <Route path="/" element={<ProtectedRoute><Layout><Dashboard /></Layout></ProtectedRoute>} />
+        {/* <Route path="/produk/tambah" element={<ProtectedRoute><Layout><TambahProduk /></Layout></ProtectedRoute>} /> */}
         <Route path="/products" element={<ProtectedRoute><Layout><Products /></Layout></ProtectedRoute>} />
         <Route path="/settings" element={<ProtectedRoute><Layout><Settings /></Layout></ProtectedRoute>} />
         <Route path="/cashier" element={<ProtectedRoute><Layout><Cashier /></Layout></ProtectedRoute>} />

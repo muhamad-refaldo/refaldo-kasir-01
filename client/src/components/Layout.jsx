@@ -1,24 +1,24 @@
 import React from 'react';
-import Navbar from './Navbar';
-import Sidebar from './Sidebar';
+import Sidebar from './Sidebar'; // Pastikan path import ini benar
 
 const Layout = ({ children }) => {
   return (
-    <div className="drawer lg:drawer-open" data-theme="night">
-      <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-      <div className="drawer-content flex flex-col items-center justify-start">
-        {/* Navbar */}
-        <Navbar />
-        {/* Page content here */}
-        <main className="w-full p-4 md:p-6 bg-base-200">
-          {children}
-        </main>
-      </div>
-      <div className="drawer-side">
-        <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
-        {/* Sidebar content here */}
-        <Sidebar />
-      </div>
+    <div className="flex h-screen bg-slate-900 text-white font-sans">
+      {/* Sidebar: 
+        - Di layar besar (lg), sidebar akan statis.
+        - Di layar kecil, sidebar akan dikontrol oleh state di dalam komponen Sidebar itu sendiri (slide-in/out).
+      */}
+      <Sidebar />
+
+      {/* Konten Utama:
+        - 'flex-1' membuat area ini mengisi semua sisa ruang horizontal.
+        - 'overflow-y-auto' menambahkan scrollbar vertikal hanya jika kontennya lebih panjang dari layar.
+        - 'w-full' ditambahkan untuk mengatasi potensi masalah lebar di beberapa browser.
+      */}
+      <main className="flex-1 w-full overflow-y-auto">
+        {/* Konten dari setiap halaman akan dirender di sini */}
+        {children}
+      </main>
     </div>
   );
 };
