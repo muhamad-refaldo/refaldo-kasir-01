@@ -78,7 +78,7 @@ const Dashboard = () => {
                     {getGreeting()}, {user?.name.split(' ')[0]}!
                 </h1>
                 <p className="text-md text-slate-400 mt-1">
-                    Selamat datang di anjungan kendali {store?.name}.
+                    Selamat datang kembali {store?.name}, mulai transaksi apa hari ini
                 </p>
             </div>
 

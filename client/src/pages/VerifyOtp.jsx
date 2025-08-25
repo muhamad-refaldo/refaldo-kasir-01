@@ -128,10 +128,10 @@ const VerifyOtp = () => {
                         <div className="text-center mb-8">
                             <HiOutlineShieldCheck className="mx-auto text-5xl text-cyan-400 mb-4 animate-pulse" />
                             <h1 className="text-3xl font-bold text-white tracking-wider font-mono">
-                                Dekripsi Sinyal
+                                Verifikasi OTP
                             </h1>
                             <p className="text-slate-400 mt-2 text-sm">
-                                Kode transmisi telah dikirim ke: <br/>
+                                Kode Anda Telah Di Kirim Ke: <br/>
                                 <strong className="text-cyan-300 break-all">{email}</strong>
                             </p>
                         </div>
@@ -171,7 +171,7 @@ const VerifyOtp = () => {
 
                         {/* --- [FITUR BARU] Tombol Kirim Ulang dengan Countdown --- */}
                         <div className="text-center text-sm text-slate-400 mt-8">
-                            Tidak menerima sinyal? 
+                            Tidak Menerima Kode?
                             <button 
                                 type="button"
                                 onClick={handleResendOtp}
