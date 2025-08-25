@@ -124,8 +124,8 @@ const History = () => {
             {/* Header dan Kontrol */}
             <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4">
                 <div>
-                    <h1 className="text-3xl sm:text-4xl font-bold text-white">Riwayat & Laporan</h1>
-                    <p className="text-md text-slate-400 mt-1">Tinjau semua transaksi dan ringkasan harian.</p>
+                    <h1 className="text-3xl sm:text-4xl font-bold text-white">Riwayat & Laporan Harian</h1>
+                    <p className="text-md text-slate-400 mt-1">Semua transaksi dan ringkasan harian.</p>
                 </div>
                 <div className="relative">
                     <CalendarDaysIcon className="absolute top-1/2 -translate-y-1/2 left-3 text-slate-400 w-5 h-5"/>

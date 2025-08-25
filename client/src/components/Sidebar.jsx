@@ -57,8 +57,8 @@ const Sidebar = () => {
         { name: 'Dashboard', path: '/', icon: <HomeIcon className="w-6 h-6" /> },
         { name: 'Kasir', path: '/cashier', icon: <ShoppingCartIcon className="w-6 h-6" /> },
         { name: 'Produk', path: '/products', icon: <CubeIcon className="w-6 h-6" /> },
-        { name: 'History', path: '/history', icon: <ClockIcon className="w-6 h-6" /> },
-        { name: 'Laporan', path: '/reports/monthly', icon: <DocumentChartBarIcon className="w-6 h-6" /> }
+        { name: 'Laporan Harian', path: '/history', icon: <ClockIcon className="w-6 h-6" /> },
+        { name: 'Laporan Bulanan', path: '/reports/monthly', icon: <DocumentChartBarIcon className="w-6 h-6" /> }
     ];
 
     const secondaryMenuItems = [

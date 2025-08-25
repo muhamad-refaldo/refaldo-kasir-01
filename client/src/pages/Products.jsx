@@ -96,8 +96,8 @@ const Products = () => {
             {/* Header Halaman */}
             <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4">
                 <div>
-                    <h1 className="text-3xl sm:text-4xl font-bold text-white">Inventaris Produk</h1>
-                    <p className="text-md text-slate-400 mt-1">Kelola semua produk di pangkalan data Anda.</p>
+                    <h1 className="text-3xl sm:text-4xl font-bold text-white">Produk</h1>
+                    <p className="text-md text-slate-400 mt-1">Kelola semua produk anda.</p>
                 </div>
                 <button 
                     className="flex items-center justify-center gap-2 w-full sm:w-auto bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-500/50"

@@ -106,7 +106,7 @@ const MonthlyReport = () => {
             <div className="flex flex-col sm:flex-row justify-between sm:items-start gap-4">
                 <div>
                     <h1 className="text-3xl sm:text-4xl font-bold text-white">Laporan Bulanan</h1>
-                    <p className="text-md text-slate-400 mt-1">Analisis performa penjualan bulanan Anda.</p>
+                    <p className="text-md text-slate-400 mt-1">Laporan penjualan bulanan.</p>
                 </div>
                 <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
                     <select className="select-style" value={month} onChange={e => setMonth(e.target.value)}>
